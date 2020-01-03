@@ -1,35 +1,40 @@
-nav{display:block;
-    float: left;}
-.collapsible-navbar {
+body{
+    margin:auto;
+  
+}
+.nav{
+    width: 100%;
+}
+.sidebar {
+    display: inline-block;
+    width:25%;
+    height:100%;
     font-family: 'Oswald', sans-serif;
     padding: 0 0 0 50px;
     max-height: 0;
     /*overflow: hidden;*/
-  }
-
-.collapsible-navbar {
-    background-color: rgb(255, 255, 255);
+    background: #111;
     padding: 0px 30px;
     border-bottom: 3px solid #CDE700;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-}
+  }
 
-.collapsible-navbar ul {
+
+.sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
-.collapsible-navbar a {
-    display: block;
+.sidebar a {
+    
     padding: 10px;
     text-decoration: none;
 }
 
 .toggle label {
-    font-family: 'Sedgwick Ave Display', cursive;
+
     font-size: 20px;
     display: block;
-    cursor: pointer;
     padding: 10px 0 10px 50px;
     background: url(../photos/arrow-right.png) no-repeat;
     background-size: 50px;
@@ -46,10 +51,15 @@ nav{display:block;
 input:checked +label {
     background-image: url(../photos/arrow-left.png);
 }
-input:checked ~ .collapsible-navbar {
+input:checked ~ .close {
     max-height: 100%;
 }
 
 .content{
-    display:block;
+    display:inline-block;
+}
+.hero{
+    width:75%;
+    display: block;
+    height: 100%;
 }
