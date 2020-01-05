@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sant-serif;
+}
+
+.container {
+  text-align: center;
+  padding: .8em 1.2em;
+}
+
+/*Navigatom bar*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 50px;
+}
+
+nav ul {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  text-align: left;
+  background: rgb(36, 41, 44);
+  height: 100%;
+  z-index: 7;
+  padding-top: 3em;
+  display: flex;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  padding: 1em 1em;
+  background-color: rgb(52, 59, 63);
+  color: red;
+}
+
+nav ul li a::hover {
+  background-color: rgb(65, 75, 78);
+  color: red;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.menu {
+  width: 25px;
+  margin-top: 45%;
+  transform: translateX(20%);
+}
+
+/*Footer section*/
+
+/*Terms of service*/
+.tos {
+  margin: 0;
+  color: black;
+  padding: 4em;
+  font-family: 'Montserrat', sant-serif;
+}
+
+/*Footer css*/
+.created a {
+  color: white;
+}
+
+.footer-container {
+  margin-top: 50px;
+  width: 100%;
+  background: #3d444a;
+  color: #fff;
+  padding: 3em 0;
+  border-top-right-radius: 40px;
+  transform: skewY(2deg);
+}
+
+.footer-container .container {
+  transform: skewY(-2deg);
+}
+
+.footer-container:before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #3d444a;
+  position: absolute;
+  top: -39px;
+  left: 0;
+  z-index: -2;
+}
+
+.footer-container:after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.footer-links {
+  margin: 0, auto;
+}
+
+.footer-links li {
+  display: inline-block;
+}
+
+.footer-links li a {
+  color: #909090;
+  font-size: .8em;
+}
+
+/*Grid display*/
+.row {
+  flex-wrap: wrap;
+  padding: 0 4px;
+  align-content: center;
+}
+
+/*Column css*/
+
+/* Create four equal columns that sits next to each other */
+.column {
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 1em;
+  vertical-align: middle;
+  width: 350px;
+  height: auto;
+  z-index: 10;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media only screen and (min-width:1280px) {
+  .column {
+    max-width: 25%;
+  }
+
+  .column img {
+    margin-top: 1em;
+    vertical-align: middle;
+    width: 275px;
+    height: auto;
+  }
+
+  .container {
+    width: 70%;
+  }
+
+}
+
+/*Media Queries*/
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media only screen and (min-width:1024px) {
+  .column {/*    flex: 25%*/ ;
+    max-width: 33%;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .show-desktop {
+    display: block;
+    margin: 0 auto 13% auto;
+  }
+
+  .hide-desktop {
+    display: none;
+  }
+
+  nav ul {
+    position: inherit;
+    width: auto;
+    background: none;
+    height: auto;
+    display: flex;
+    padding-top: 0;
+  }
+
+  nav ul li {
+    float: left;
+  }
+
+  nav ul li a {
+    color: black;
+    background-color: inherit;
+    text-align: right;
+  }
+
+  nav ul li a::hover {
+    background-color: inherit;
+  }
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media only screen and (min-width:875px) {
+  .column {
+    max-width: 50%;
+  }
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media only screen and (min-width:650px) {
+  .column {
+    max-width: 100%;
+  }
+
+}
